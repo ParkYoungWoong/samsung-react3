@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 const navigations = [
   { href: '/', label: 'Home' },
@@ -9,6 +9,13 @@ const navigations = [
 
 export default function Header() {
   const pathname = usePathname()
+  const router = useRouter()
+
+  function onClick() {
+    console.log('Movie')
+    router.push('/movies/tt4154796?plot=full')
+    // navigate(-3)
+  }
 
   return (
     <header className="flex items-center">
@@ -27,6 +34,7 @@ export default function Header() {
           </Link>
         ))}
       </nav>
+      <button onClick={onClick}>Move to Movies</button>
     </header>
   )
 }
