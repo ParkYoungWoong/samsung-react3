@@ -19,7 +19,7 @@ export default async function Page({
   }
 
   async function fetchMovieDetails() {
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    await new Promise(resolve => setTimeout(resolve, 500))
     const res = await fetch(
       `http://omdbapi.com/?apikey=7035c60c&i=${movieId}&plot=${plot}`
     )
