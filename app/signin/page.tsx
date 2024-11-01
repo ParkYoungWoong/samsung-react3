@@ -1,4 +1,11 @@
 import { signIn } from '@/serverActions/signin'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: '로그인 페이지',
+  description:
+    '여기는 로그인 페이지이고, 아이디와 비밀번호를 입력하면 로그인 됩니다.'
+}
 
 export default function SignIn() {
   return (

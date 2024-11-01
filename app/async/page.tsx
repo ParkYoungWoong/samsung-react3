@@ -3,6 +3,10 @@ import Xyz from './Xyz'
 import { Suspense } from 'react'
 import Loader from '@/components/Loader'
 
+export const metadata = {
+  title: '비동기 컴포넌트 스트리밍'
+}
+
 export default async function Page() {
   await new Promise(resolve => setTimeout(resolve, 1000))
   return (

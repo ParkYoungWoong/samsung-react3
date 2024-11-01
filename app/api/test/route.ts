@@ -1,5 +1,3 @@
-import type { NextRequest } from 'next/server'
-
 export async function GET() {
   return Response.json({
     name: 'Heropy',
@@ -8,9 +6,7 @@ export async function GET() {
   })
 }
 
-export async function POST(request: NextRequest) {
-  const body = await request.json()
-  // db.Users.insert(body)
+export async function POST() {
   return Response.json({
     name: 'Neo',
     age: 22,
