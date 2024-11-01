@@ -4,7 +4,7 @@ import Image from 'next/image'
 async function getMovie(movieId: string, plot: 'full' | 'short') {
   await new Promise(resolve => setTimeout(resolve, 500))
   const res = await fetch(
-    `http://omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&i=${movieId}&plot=${plot}`
+    `http://omdbapi.com/?apikey=${process.env.OMDB_API}&i=${movieId}&plot=${plot}`
   )
   return res.json()
 }
