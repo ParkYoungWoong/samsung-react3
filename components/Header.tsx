@@ -4,7 +4,8 @@ import { usePathname, useRouter } from 'next/navigation'
 
 const navigations = [
   { href: '/', label: 'Home' },
-  { href: '/movies', label: 'Movies' }
+  { href: '/movies', label: 'Movies' },
+  { href: '/async', label: 'Async' }
 ]
 
 export default function Header() {
